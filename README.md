@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Shape Drawing and Calculation Tool (ShapeArchitect)
 
-## Project info
+A web-based application to create, draw, and calculate geometric shapes using strong Object-Oriented Programming (OOP) principles. This project demonstrates the practical implementation of OOP concepts in a modern web environment and is developed as part of an academic assignment.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🔗 Live Demo
 
-There are several ways of editing your application.
+**Deployed URL:**  
+(Add Netlify URL here)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🎯 Project Objectives
 
-Changes made via Lovable will be committed automatically to this repo.
+- Create and manage multiple geometric shapes
+- Draw shapes visually using a canvas
+- Calculate area and perimeter of shapes
+- Apply core Object-Oriented Programming concepts
+- Demonstrate clean, modular architecture
+- Deploy a production-ready web application
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧠 OOP Concepts Implemented
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Abstraction**: Abstract `Shape` class with mandatory methods
+- **Inheritance**: `Shape → Polygon → Rectangle / Triangle`, `Shape → Circle`
+- **Encapsulation**: Private properties with controlled getters and setters
+- **Polymorphism**: Overridden `draw()` and calculation methods
+- **Method Overloading**: Multiple `scale()` and calculation variations
+- **Interfaces (JS-style)**: `Drawable`, `Resizable`
+- **Static Members**: Unit conversion utilities
+- **Exception Handling**: Custom error classes for validation
+- **Collections**: Map for unique shapes, stack-based undo operations
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Canvas API
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+### Tooling
 - Vite
-- TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- TypeScript
 
-## How can I deploy this project?
+### Deployment
+- Netlify (Manual Deployment)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🧪 Features
 
-Yes, you can!
+- Create geometric shapes such as Rectangle, Square, Circle, and Triangle
+- Draw shapes visually on an interactive canvas
+- Customize shape position, size, and color
+- Calculate area and perimeter for each shape
+- Real-time rendering and updates
+- Console-style system logs for actions
+- Modular and object-oriented design
+- Undo support for shape operations
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 👨‍🎓 Academic Use
+
+This project is developed for academic purposes to demonstrate:
+
+- Core Object-Oriented Programming (OOP) concepts
+- Abstraction, inheritance, encapsulation, and polymorphism
+- Clean and modular software architecture
+- Practical application of OOP in web development
+- Frontend build process and deployment using Netlify
+
+---
+
+## ✨ Author
+
+**Ayush Kumar**
