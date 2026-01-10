@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Blueprint dark theme */
+    --background: 220 50% 8%;
+    --foreground: 200 20% 95%;
+
+    --card: 220 45% 12%;
+    --card-foreground: 200 20% 95%;
+
+    --popover: 220 45% 12%;
+    --popover-foreground: 200 20% 95%;
+
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 50% 8%;
+
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 200 20% 95%;
+
+    --muted: 220 40% 15%;
+    --muted-foreground: 200 15% 60%;
+
+    --accent: 280 80% 60%;
+    --accent-foreground: 200 20% 95%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 200 20% 95%;
+
+    --border: 200 30% 25%;
+    --input: 220 40% 18%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --cyan-glow: 190 100% 50%;
+    --grid-line: 200 30% 20%;
+    --success: 160 70% 45%;
+    --warning: 40 90% 55%;
+
+    /* Shadows */
+    --shadow-cyan: 0 0 20px hsl(190 100% 50% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 50% 5% / 0.5);
+
+    --sidebar-background: 220 45% 10%;
+    --sidebar-foreground: 200 20% 95%;
+    --sidebar-primary: 190 100% 50%;
+    --sidebar-primary-foreground: 220 50% 8%;
+    --sidebar-accent: 220 40% 18%;
+    --sidebar-accent-foreground: 200 20% 95%;
+    --sidebar-border: 200 30% 25%;
+    --sidebar-ring: 190 100% 50%;
+  }
+
+  .dark {
+    --background: 220 50% 8%;
+    --foreground: 200 20% 95%;
+    --card: 220 45% 12%;
+    --card-foreground: 200 20% 95%;
+    --popover: 220 45% 12%;
+    --popover-foreground: 200 20% 95%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 50% 8%;
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 200 20% 95%;
+    --muted: 220 40% 15%;
+    --muted-foreground: 200 15% 60%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 200 20% 95%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 200 20% 95%;
+    --border: 200 30% 25%;
+    --input: 220 40% 18%;
+    --ring: 190 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .blueprint-grid {
+    background-image: 
+      linear-gradient(hsl(var(--grid-line)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-line)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .glow-cyan {
+    box-shadow: var(--shadow-cyan);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+
+  .card-blueprint {
+    @apply bg-card border border-border rounded-lg;
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md;
+    @apply hover:brightness-110 transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground font-medium px-4 py-2 rounded-md;
+    @apply border border-border hover:bg-muted transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  .btn-danger {
+    @apply bg-destructive text-destructive-foreground font-medium px-4 py-2 rounded-md;
+    @apply hover:brightness-110 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply bg-input border border-border rounded-md px-3 py-2 text-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent;
+    @apply placeholder:text-muted-foreground;
+  }
+
+  .select-field {
+    @apply bg-input border border-border rounded-md px-3 py-2 text-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer;
+  }
+
+  .ascii-output {
+    @apply font-mono text-sm leading-tight whitespace-pre;
+    color: hsl(var(--primary));
+  }
+
+  .shape-preview {
+    @apply border-2 border-dashed rounded-lg p-4;
+    border-color: hsl(var(--border));
+  }
+
+  .console-output {
+    @apply bg-background/50 border border-border rounded-lg p-4 font-mono text-sm;
+    @apply overflow-auto max-h-48;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.6);
+    }
+  }
+
+  .animate-draw {
+    animation: draw-in 0.5s ease-out forwards;
+  }
+
+  @keyframes draw-in {
+    from {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+}
