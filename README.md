@@ -7,7 +7,7 @@ A web-based application to create, draw, and calculate geometric shapes using st
 ## 🔗 Live Demo
 
 **Deployed URL:**  
-(Add Netlify URL here)
+https://ayushxyz.netlify.app/
 
 ---
 
